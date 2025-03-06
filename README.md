@@ -1,1 +1,1 @@
-# Exerc-cios-python-L-gica-de-programa-o-e-pr-tica
+# Exercícios Lógica de programação python.
