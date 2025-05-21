@@ -1,0 +1,112 @@
+def ex01_soma():
+    print("Soma:", 5 + 3)
+
+def ex02_par_ou_impar():
+    print("Par" if 8 % 2 == 0 else "Ímpar")
+
+def ex03_fatorial():
+    n = 5
+    fat = 1
+    for i in range(1, n + 1):
+        fat *= i
+    print("Fatorial:", fat)
+
+def ex04_palindromo():
+    txt = "radar"
+    print("É palíndromo" if txt == txt[::-1] else "Não é palíndromo")
+
+def ex05_fibonacci():
+    a, b = 0, 1
+    resultado = []
+    for _ in range(10):
+        resultado.append(a)
+        a, b = b, a + b
+    print("Fibonacci:", resultado)
+
+def ex06_contar_vogais():
+    texto = "Python é incrível"
+    total = sum(c.lower() in "aeiou" for c in texto)
+    print("Vogais:", total)
+
+def ex07_verificar_primo():
+    num = 7
+    if num > 1 and all(num % i != 0 for i in range(2, num)):
+        print("É primo")
+    else:
+        print("Não é primo")
+
+def ex08_inverter_string():
+    print("Invertida:", "Python"[::-1])
+
+def ex09_media_lista():
+    notas = [7.5, 8.0, 6.5]
+    print("Média:", sum(notas) / len(notas))
+
+def ex10_tabuada():
+    print("Tabuada do 5:")
+    for i in range(1, 11):
+        print(f"5 x {i} = {5 * i}")
+
+def ex11_maior_valor():
+    print("Maior:", max([4, 9, 1, 6, 2]))
+
+def ex12_soma_1_100():
+    print("Soma 1 a 100:", sum(range(1, 101)))
+
+def ex13_pares_1_20():
+    print("Pares:", [x for x in range(2, 21, 2)])
+
+def ex14_remover_duplicatas():
+    lista = [1, 2, 2, 3, 4, 4, 5]
+    print("Sem duplicatas:", list(set(lista)))
+
+def ex15_contar_palavras():
+    frase = "Python é uma linguagem poderosa"
+    print("Palavras:", len(frase.split()))
+
+def ex16_sinal_numero():
+    num = -10
+    print("Positivo" if num > 0 else "Negativo" if num < 0 else "Zero")
+
+def ex17_quadrados_1_10():
+    print("Quadrados:", [x**2 for x in range(1, 11)])
+
+def ex18_elemento_na_lista():
+    print("Contém 'banana':", 'banana' in ['maçã', 'banana', 'laranja'])
+
+def ex19_celsius_para_fahrenheit():
+    c = 25
+    print("Fahrenheit:", c * 9/5 + 32)
+
+def ex20_contagem_letras():
+    texto = "banana"
+    contagem = {letra: texto.count(letra) for letra in set(texto)}
+    print("Contagem de letras:", contagem)
+
+# === Execução automatizada ===
+exercicios = [
+    ex01_soma,
+    ex02_par_ou_impar,
+    ex03_fatorial,
+    ex04_palindromo,
+    ex05_fibonacci,
+    ex06_contar_vogais,
+    ex07_verificar_primo,
+    ex08_inverter_string,
+    ex09_media_lista,
+    ex10_tabuada,
+    ex11_maior_valor,
+    ex12_soma_1_100,
+    ex13_pares_1_20,
+    ex14_remover_duplicatas,
+    ex15_contar_palavras,
+    ex16_sinal_numero,
+    ex17_quadrados_1_10,
+    ex18_elemento_na_lista,
+    ex19_celsius_para_fahrenheit,
+    ex20_contagem_letras
+]
+
+for i, func in enumerate(exercicios, 1):
+    print(f"\n=== Exercício {i:02} ===")
+    func()
